@@ -1,9 +1,9 @@
 import "@/App.css";
-import Navbar from "@/layout/Navbar/Navbar";
-import Customization from "@/layout/Customization/Customization";
-import Playground from "@/layout/playground/Playground";
-import { useState } from "react";
-import Actions from "@/layout/Actions/Actions";
+import Navbar from "@/layout/Navbar/Navbar.jsx";
+import Customization from "@/layout/Customization/Customization.jsx";
+import Playground from "@/layout/playground/Playground.jsx";
+import { useState } from "react.jsx";
+import Actions from "@/layout/Actions/Actions.jsx";
 
 function App() {
 	const [radius, setRadius] = useState(0);
