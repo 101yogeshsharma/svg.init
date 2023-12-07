@@ -1,0 +1,19 @@
+.playground {
+    width: 40vw;
+    background: linear-gradient(-45deg, #00326b, #1a000a, #264855, #00291f);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 5px 20px 3px black inset;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    margin: 4vh;
+}

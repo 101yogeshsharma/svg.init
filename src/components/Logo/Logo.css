@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "nothing";
+    src: url("../../assets/fonts/8bit.ttf");
+}
+
+.logo-segment {
+    transition: 2.05 all ease-in-out !important;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1%;
+    padding-top: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: nothing;
+    color: darkgray;
+}
+
+.reposition {
+    top: 150px !important;
+    left: 500px !important;
+}
+
+.logo>.text {
+    font-size: 4rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logo>:nth-child(1)>span:hover {
+    color: white;
+    margin: auto 5px;
+    scale: 2;
+    text-shadow: 1px 1px 1px 1px gainsboro;
+}
+
+.logo>:nth-child(2) {
+    transform: rotate(30deg);
+    top: 45%;
+    left: 80px;
+    position: absolute;
+}
+
+/* .logo>:nth-child(2):hover {
+    animation-name: rotation 0.5s 0s infinite reverse;
+    animation-delay: 1s;
+    transform: rotate(1deg);
+} */
+
+.rotating {
+    animation: rotation 0.5s 0s infinite reverse;
+    animation-delay: 0s;
+    transform: rotate(1deg);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(1deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+}

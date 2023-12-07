@@ -1,0 +1,10 @@
+.nav {
+    width: 100vw;
+    height: 35vh;
+    max-height: 100px;
+    background: transparent;
+     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
