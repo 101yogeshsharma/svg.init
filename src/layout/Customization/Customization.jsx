@@ -1,4 +1,4 @@
-import Divider from "../../components/Divider/Divider";
+import Divider from "@/components/Divider/Divider";
 import "./Customization.css";
 
 export default function Customization(props) {
