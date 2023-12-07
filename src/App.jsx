@@ -2,7 +2,7 @@ import "@/App.css";
 import Navbar from "@/layout/Navbar/Navbar.jsx";
 import Customization from "@/layout/Customization/Customization.jsx";
 import Playground from "@/layout/playground/Playground.jsx";
-import { useState } from "react.jsx";
+import { useState } from "react";
 import Actions from "@/layout/Actions/Actions.jsx";
 
 function App() {
