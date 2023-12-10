@@ -87,7 +87,8 @@ body {
     height: 90vh;
   }
 
-  .content>div {
+  .content>.customization-segment,
+  .content>.playground {
     margin: 20px auto;
     width: 80%;
   }
