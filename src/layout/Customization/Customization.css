@@ -2,7 +2,7 @@
     width: 40vw;
     height: 60vh;
     animation: gradient 15s ease infinite;
-    box-shadow: 6px 5px 20px 3px black inset;
+    box-shadow: 5px -9px 20px 3px black inset;
     background: #1a1a1a;
     display: flex;
     align-items: center;

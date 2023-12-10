@@ -77,12 +77,18 @@ body {
   margin-top: -7vh;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 16/8) {
   .content {
     display: flex !important;
     justify-content: space-evenly !important;
     align-items: center !important;
     flex-direction: column !important;
     overflow: auto;
+    height: 90vh;
+  }
+
+  .content>div {
+    margin: 20px auto;
+    width: 80%;
   }
 }
