@@ -11,6 +11,8 @@ body {
 
 * {
   transition: 0.5s all ease-in-out;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 30"><rect x="0px" y="0px" rx="4" ry="4" width="8px" height="8px" fill="gainsboro" stroke="white" stroke-width="1px"></rect></svg>'), auto !important;
+  ;
 }
 
 #root {
