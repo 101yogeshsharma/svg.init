@@ -1,18 +1,23 @@
 import "@/App.css";
+
+import { useState } from "react";
+
 import Navbar from "@/layout/Navbar/Navbar.jsx";
 import Customization from "@/layout/Customization/Customization.jsx";
 import Playground from "@/layout/Playground/Playground.jsx";
-import { useState } from "react";
 import Actions from "@/layout/Actions/Actions.jsx";
 
 function App() {
-	const [radius, setRadius] = useState(0);
-	const [width, setWidth] = useState(50);
-	const [height, setHeight] = useState(50);
-	const [filled, setFilled] = useState(false);
-	const [backgroundColor, setBackgroundColor] = useState("transparent");
-	const [strokeColor, setStrokeColor] = useState("white");
-	const [strokeWidth, setStrokeWidth] = useState(1);
+	const [shapeProperties, setShapePropties] = useState({
+		borderRadius: 0,
+		width: 50,
+		height: 50,
+		filled: false,
+		backgroundColor: 'transparent',
+		strokeColor: 'white',
+		strokeWidth: 1,
+		selectedShape: 'square'
+	})
 	return (
 		<div className='app'>
 			<div className='header'>
@@ -20,23 +25,11 @@ function App() {
 			</div>
 			<div className='content'>
 				<Customization
-					setRadius={setRadius}
-					setWidth={setWidth}
-					setHeight={setHeight}
-					setFilled={setFilled}
-					setBackgroundColor={setBackgroundColor}
-					setStrokeColor={setStrokeColor}
-					setStrokeWidth={setStrokeWidth}
+					setShapePropties={setShapePropties}
 				/>
 				<Actions />
 				<Playground
-					borderRadius={radius}
-					width={width}
-					height={height}
-					filled={filled}
-					backgroundColor={backgroundColor}
-					strokeColor={strokeColor}
-					strokeWidth={strokeWidth}
+					shapeProperties={shapeProperties}
 				/>
 			</div>
 		</div>

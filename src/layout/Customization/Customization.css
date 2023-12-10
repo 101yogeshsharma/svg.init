@@ -1,13 +1,10 @@
 .customization-segment {
     width: 40vw;
     height: 60vh;
-    background: linear-gradient(-45deg, #00326b, #1a000a, #264855, #00291f);
-    background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     box-shadow: 6px 5px 20px 3px black inset;
     background: #1a1a1a;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
@@ -20,13 +17,7 @@
 .filters-container {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
-}
-
-.slider-container,
-.filters-container {
-    height: 30%;
-    margin: 5%;
+    flex-direction: column;
 }
 
 .slidecontainer {
@@ -66,14 +57,30 @@
 
 .shapes-container {
     height: 30%;
-    width: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.shapes-container>div {
+    padding: 5px;
+    width: 75px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 5px;
 }
 
-.shapes-container>svg {
-    height: 50px;
+.shapes-container>div:hover {
+    background-color: black;
+}
+
+.shapes-container>div>label {
+    margin-bottom: 10px;
 }
 
 .checkbox-container {
@@ -145,4 +152,10 @@
 .color-picker-container>input {
     margin-right: 8px;
     background-color: black;
+}
+
+.color-selectors-container {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
