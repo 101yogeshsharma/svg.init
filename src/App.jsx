@@ -18,8 +18,23 @@ function App() {
 		strokeWidth: 1,
 		selectedShape: 'square'
 	})
+	const [contextMenuState, setContextMenuState] = useState({
+		show: false,
+		top: 0,
+		left: 0
+	});
+
+	const hideContextMenu = (e) => {
+		setContextMenuState(() => {
+			return {
+				show: false,
+				top: e.pageY,
+				left: e.pageX
+			}
+		});
+	}
 	return (
-		<div className='app'>
+		<div className='app' onClick={hideContextMenu}>
 			<div className='header'>
 				<Navbar />
 			</div>
@@ -27,9 +42,11 @@ function App() {
 				<Customization
 					setShapePropties={setShapePropties}
 				/>
-				<Actions />
+				<Actions contextMenuState={contextMenuState} />
 				<Playground
 					shapeProperties={shapeProperties}
+					setContextMenuState={setContextMenuState}
+					hideContextMenu={hideContextMenu}
 				/>
 			</div>
 		</div>

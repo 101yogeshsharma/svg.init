@@ -71,11 +71,16 @@ body {
   position: relative;
 }
 
+.playground-segment {
+  margin-top: -7vh;
+}
+
 @media screen and (max-width: 800px) {
   .content {
     display: flex !important;
     justify-content: space-evenly !important;
     align-items: center !important;
     flex-direction: column !important;
+    overflow: auto;
   }
 }

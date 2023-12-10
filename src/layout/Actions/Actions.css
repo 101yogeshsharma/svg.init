@@ -1,58 +1,15 @@
 .action-segment {
-    /* padding: 20px; */
-    box-shadow: 6px 5px 20px 3px black inset;
     transition: 1s all 1s ease-in-out 1s;
-    width: 25vh;
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+    position: fixed;
+    /* padding-bottom: 10px; */
 }
 
 .copy-button-segment {
-    height: 14vh;
     background: transparent;
-    margin-top: -8vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.copy-button-handle {
-    background: black;
-    height: 100px;
-    width: 2vh;
-    position: relative;
-    z-index: 999;
-    top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.download-button-handle {
-    background: black;
-    height: 15vh;
-    width: 2vh;
-    position: absolute;
-    z-index: 999;
-    top: 32vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.download-button-handle.left {
-    left: 103.8vh;
-}
-
-.download-button-handle.right {
-    left: 119.3vh;
 }
 
 .copy-button,
@@ -61,19 +18,9 @@
     border: none;
     box-shadow: none;
     padding: 5px 10px;
-    font-size: 1rem;
-    font-weight: 900;
-    color: #1a1a1a;
-    text-shadow: 0px 0px 20px #878787;
-    margin-top: 10px;
+    font-size: 0.5rem;
+    color: white;
     background: black;
-    color: #4b4b4b;
-}
-
-#handle-pin {
-    height: 5px;
-    width: 5px;
-    background: #979797;
-    border-radius: 18px;
-    margin-top: 5px;
+    width: 100%;
+    cursor: pointer;
 }

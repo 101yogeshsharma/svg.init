@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./Actions.css";
 
-export default function Actions() {
+function Actions({ contextMenuState }) {
 	const [buttonText, setButtonText] = useState("Copy");
 	const addSvgToClipboard = () => {
 		let svg = document.getElementById("playground-content");
@@ -24,19 +24,25 @@ export default function Actions() {
 		output.click();
 	}
 
+	useEffect(() => {
+		if (contextMenuState.show) {
+			var menu = document.getElementById("action-segment")
+			menu.style.display = 'block';
+			menu.style.left = contextMenuState.left + "px";
+			menu.style.top = contextMenuState.top + "px";
+		} else {
+			document.getElementById("action-segment").style.display = "none"
+		}
+	});
+
 	return (
-		<div className='action-segment'>
+		<div className='action-segment' id="action-segment" style={{ display: 'none' }}>
 			<div className="copy-button-segment">
-				<div className="copy-button-handle"><div id="handle-pin"></div></div>
 				<button className='copy-button' onClick={addSvgToClipboard}>
 					{buttonText}
 				</button>
 			</div>
 			<div className="download-button-segment">
-				<div className="download-button-handles-segment">
-					<div className="download-button-handle left"><div id="handle-pin"></div></div>
-					<div className="download-button-handle right"><div id="handle-pin"></div></div>
-				</div>
 				<button className='download-button' onClick={downloadSvg}>
 					Download
 				</button>
@@ -44,3 +50,5 @@ export default function Actions() {
 		</div>
 	);
 }
+
+export default Actions;

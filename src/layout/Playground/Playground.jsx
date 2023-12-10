@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unknown-property */
+import Actions from "../Actions/Actions";
 import "./Playground.css";
 
-export default function Playground({ shapeProperties }) {
+export default function Playground({ shapeProperties, setContextMenuState, hideContextMenu }) {
 	const {
 		selectedShape,
 		borderRadius,
@@ -12,10 +13,21 @@ export default function Playground({ shapeProperties }) {
 		strokeColor,
 	} = shapeProperties;
 
-	const fillColor = filled ? backgroundColor || "transparent" : "transparent"
+	const handleShowContextMenu = (e) => {
+		e.preventDefault();
+		setContextMenuState((prev) => {
+			return {
+				show: !prev.show,
+				top: e.pageY,
+				left: e.pageX
+			}
+		});
+	}
+
+	const fillColor = filled ? backgroundColor || "transparent" : "transparent";
 
 	return (
-		<div className='playground'>
+		<div className='playground' id="playground" onContextMenu={handleShowContextMenu} onClick={hideContextMenu}>
 			<div className='playground-content' id='playground-content' style={{ width: '500px', height: '500px' }}>
 				<svg height="500px" width="500px">
 					{selectedShape === "square" && <rect x='120px' y='120px' rx={borderRadius} ry={borderRadius} width="200px" height="200px" fill={fillColor} stroke={strokeColor} stroke-width={strokeWidth + "px"} />}
