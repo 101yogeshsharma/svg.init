@@ -91,5 +91,6 @@ body {
   .content>.playground {
     margin: 20px auto;
     width: 80%;
+    height: 40vh;
   }
 }
