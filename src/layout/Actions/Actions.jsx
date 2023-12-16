@@ -15,12 +15,10 @@ function Actions({ contextMenuState }) {
 		const svgData = new XMLSerializer().serializeToString(svg);
 		const svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)));
 		const svgDataUrl = `data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`;
-		console.log(svgDataUrl);
 
 		const output = document.createElement('a');
 		output.href = svgDataUrl;
 		output.download = "image.svg";
-		console.log(output);
 		output.click();
 	}
 

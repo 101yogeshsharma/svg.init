@@ -14,6 +14,7 @@ function App() {
 		height: 50,
 		filled: false,
 		backgroundColor: 'transparent',
+		backgroundImage: null,
 		strokeColor: 'white',
 		strokeWidth: 1,
 		selectedShape: 'square'

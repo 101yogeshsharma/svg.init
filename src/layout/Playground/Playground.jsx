@@ -8,6 +8,7 @@ export default function Playground({ shapeProperties, setContextMenuState, hideC
 		borderRadius,
 		filled,
 		backgroundColor,
+		backgroundImage,
 		strokeWidth,
 		strokeType,
 		strokeColor,
@@ -25,6 +26,10 @@ export default function Playground({ shapeProperties, setContextMenuState, hideC
 	}
 
 	const fillColor = filled ? backgroundColor || "transparent" : "transparent";
+	const imageBackground = filled && backgroundImage ? backgroundImage : '';
+
+	const style = `fill: "url(${imageBackground});"`;
+	console.log(backgroundImage);
 
 	return (
 		<div className='playground' id="playground" onContextMenu={handleShowContextMenu} onClick={hideContextMenu}>
