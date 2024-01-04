@@ -8,6 +8,7 @@
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
+    border-radius: 6px;
 }
 
 .customization-content {
@@ -33,6 +34,7 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    border-radius: 6px;
 }
 
 .slider:hover {
@@ -45,6 +47,7 @@
     width: 25px;
     height: 25px;
     background: black;
+    border-radius: 2px;
 }
 
 .slider::-moz-range-thumb {
@@ -109,6 +112,7 @@
     height: 25px;
     width: 25px;
     background-color: #4b4b4b;
+    border-radius: 6px;
 }
 
 .checkbox-container:hover input~.checkmark {
@@ -150,6 +154,7 @@
 .color-picker-container>input {
     margin-right: 8px;
     background-color: black;
+    border-radius: 6px;
 }
 
 .color-selectors-container {
