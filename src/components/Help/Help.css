@@ -1,3 +1,9 @@
+:root {
+    --glow-color: white
+}
+
+
+
 .help-handle {
     position: absolute;
     height: 50px;
@@ -9,14 +15,16 @@
 
     &::before {
         height: 100px;
-        width: 5px;
-        background: gray;
+        width: 2px;
+        background: black;
         content: '';
         display: flex;
         position: absolute;
-        top: -90px;
-        left: 20px;
+        top: -100px;
+        left: 25px;
         animation: swing-handle ease-in-out 1s infinite alternate;
+        box-shadow: 1px 1px 1px 1px solid var(--glow-color);
+        z-index: 999999999;
     }
 
     &::after {
@@ -34,17 +42,47 @@
 }
 
 .help-handle-button {
+    font-family: 'Cursive', Courier, monospace;
     height: 50px;
     width: 50px;
-    background-color: #4b4b4b;
-    color: white;
-    font-size: 2rem;
+    background: linear-gradient(white 0%, white 60%, #2b2b2b 100%);
+    color: black;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 32px;
     position: fixed;
     animation: swing-ball ease-in-out 1s infinite alternate;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+}
+
+.light-bulb {
+    background: linear-gradient(white 0%, white 60%, #2b2b2b 100%);
+    height: 50px;
+    width: 50px;
+    border-radius: 32px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light-effect {
+    background: white;
+    top: -5;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: -99999999;
+    box-shadow: 1px 1px 20px 20px #3b3b3b;
+    border-radius: 32px;
 }
 
 @keyframes swing-handle {

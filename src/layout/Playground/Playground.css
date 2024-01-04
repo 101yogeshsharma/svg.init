@@ -16,3 +16,18 @@
 svg {
     margin: 4vh;
 }
+
+.social-links>a>svg {
+    margin: 10px !important;
+    animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+    0% {
+        margin-left: -100px;
+    }
+
+    100% {
+        margin-left: 10px; 
+    }
+}
