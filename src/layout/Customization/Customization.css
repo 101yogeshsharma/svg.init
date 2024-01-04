@@ -17,8 +17,9 @@
 
 .filters-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
+    font-size:1rem;
 }
 
 .slidecontainer {
@@ -80,6 +81,15 @@
     background-color: black;
 }
 
+.checkbox-container-segment {
+    display: flex;
+    justify-content: flex-start;
+
+    &>label {
+        margin-right: 40%;
+    }
+}
+
 .shapes-container>div>label {
     margin-bottom: 10px;
 }
@@ -90,10 +100,6 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     width: min-content;
 }
 
@@ -148,7 +154,6 @@
 .color-picker-container {
     width: fit-content;
     height: fit-content;
-    font-size: 22px;
 }
 
 .color-picker-container>input {

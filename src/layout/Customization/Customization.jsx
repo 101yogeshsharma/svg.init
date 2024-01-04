@@ -18,6 +18,14 @@ export default function Customization(props) {
 			}
 		});
 	};
+	const toggleRoundedEdges = (e) => {
+		props.setShapePropties((prev) => {
+			return {
+				...prev,
+				roundedEdges: !prev.roundedEdges
+			}
+		})
+	}
 	const handleBackgroundColorChange = (e) => {
 		props.setShapePropties((prev) => {
 			return {
@@ -56,7 +64,7 @@ export default function Customization(props) {
 			<div className='customization-content'>
 				<PresetShapes handleShapeSelection={handleShapeSelection} />
 				<Divider />
-				{ props.shapeProperties.selectedShape !== "circle" && <div className='slider-container'>
+				{props.shapeProperties.selectedShape === "square" && <div className='slider-container'>
 					<p>Border Radius</p>
 					<input
 						type='range'
@@ -66,7 +74,7 @@ export default function Customization(props) {
 						name='radius'
 						onChange={handleRadiusChange}
 					></input>
-				</div> }
+				</div>}
 				<div className='slider-container'>
 					<p>Stroke Width</p>
 					<input
@@ -83,6 +91,9 @@ export default function Customization(props) {
 					toggleBackground={toggleBackground}
 					handleBackgroundColorChange={handleBackgroundColorChange}
 					handleStrokeColorChange={handleStrokeColorChange}
+					toggleRoundedEdges={toggleRoundedEdges}
+					selectedShape={props.shapeProperties.selectedShape}
+					roundedEdges={props.shapeProperties.roundedEdges}
 				/>
 			</div>
 		</div>
@@ -92,14 +103,25 @@ export default function Customization(props) {
 const ColorFilters = (props) => {
 	return (
 		< div className='filters-container' >
-			<label className='checkbox-container'>
-				Filled
-				<input
-					type='checkbox'
-					onChange={props.toggleBackground}
-				></input>
-				<span className='checkmark'></span>
-			</label>
+			<div className="checkbox-container-segment">
+				{props.selectedShape !== "line" && <label className='checkbox-container'>
+					Filled
+					<input
+						type='checkbox'
+						onChange={props.toggleBackground}
+					></input>
+					<span className='checkmark'></span>
+				</label>}
+				{props.selectedShape === "line" && <label className='checkbox-container'>
+					Rounded Edges
+					<input
+						type='checkbox'
+						onChange={props.toggleRoundedEdges}
+						checked={props.roundedEdges}
+					></input>
+					<span className='checkmark'></span>
+				</label>}
+			</div>
 			<Divider />
 			<div className="color-selectors-container">
 				<label className='color-picker-container'>

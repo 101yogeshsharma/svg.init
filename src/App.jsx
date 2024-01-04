@@ -16,7 +16,8 @@ function App() {
 		backgroundColor: 'transparent',
 		strokeColor: 'white',
 		strokeWidth: 1,
-		selectedShape: 'square'
+		selectedShape: 'square',
+		roundedEdges: false
 	})
 	const [contextMenuState, setContextMenuState] = useState({
 		show: false,
