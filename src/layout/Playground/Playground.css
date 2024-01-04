@@ -1,9 +1,9 @@
 .playground {
     width: 40vw;
+    height: 75vh;
     background: linear-gradient(-45deg, #00326b, #1a000a, #264855, #00291f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 60vh;
     box-shadow: 5px -9px 20px 3px black inset;
     background: #1a1a1a;
     display: flex;

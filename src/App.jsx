@@ -41,6 +41,8 @@ function App() {
 			<div className='content'>
 				<Customization
 					setShapePropties={setShapePropties}
+					shapeProperties={shapeProperties}
+
 				/>
 				<Actions contextMenuState={contextMenuState} />
 				<Playground

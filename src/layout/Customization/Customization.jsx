@@ -56,7 +56,7 @@ export default function Customization(props) {
 			<div className='customization-content'>
 				<PresetShapes handleShapeSelection={handleShapeSelection} />
 				<Divider />
-				<div className='slider-container'>
+				{ props.shapeProperties.selectedShape !== "circle" && <div className='slider-container'>
 					<p>Border Radius</p>
 					<input
 						type='range'
@@ -66,7 +66,7 @@ export default function Customization(props) {
 						name='radius'
 						onChange={handleRadiusChange}
 					></input>
-				</div>
+				</div> }
 				<div className='slider-container'>
 					<p>Stroke Width</p>
 					<input

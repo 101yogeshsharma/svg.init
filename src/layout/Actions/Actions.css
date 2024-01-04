@@ -1,7 +1,7 @@
 .action-segment {
     transition: 1s all 1s ease-in-out 1s;
     position: fixed;
-    /* padding-bottom: 10px; */
+    width: 100px;
 }
 
 .copy-button-segment {
