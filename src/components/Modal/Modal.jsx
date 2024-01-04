@@ -32,7 +32,7 @@ export default function Modal({ show, closeModal }) {
                             </li>
                             <li>
                                 <div>
-                                    <span>Right Click on Shape to Open Actions context menu</span>
+                                    <span>Select copy to copy SVG code to clipboard</span>
                                     <span>
                                         <img src={CopyImage} alt="context menu" width={150}></img>
                                     </span>
