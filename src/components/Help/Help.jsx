@@ -9,7 +9,7 @@ export default function Help() {
     const showHideModal = (value) => {
         setShowModal(value);
         if (value) {
-            const audio = document.getElementById("audio");
+            const audio = document.getElementById("help-audio");
             audio.play();
         }
     }
@@ -19,7 +19,7 @@ export default function Help() {
                 <div className='help-handle-button'>
                     <div className='light-bulb' onClick={() => showHideModal(true)}><span>?</span></div>
                     <div className='light-effect'>
-                        <audio id="audio" src={ClickSoundEffect}></audio>
+                        <audio id="help-audio" src={ClickSoundEffect}></audio>
                     </div>
                 </div>
             </div>
