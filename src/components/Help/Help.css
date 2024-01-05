@@ -75,14 +75,17 @@
 }
 
 .light-effect {
-    background: white;
     top: -5;
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     z-index: -99999999;
-    box-shadow: 1px 1px 20px 20px #3b3b3b;
-    border-radius: 32px;
+    background: #f1f1f129;
+    box-shadow: 1px 1px 100000px 300px #3b3b3b;
+    border-radius: 96px;
+    background-size: 800px 100%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 @keyframes swing-handle {
