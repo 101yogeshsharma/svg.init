@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 @font-face {
 font-family: "nothing";
 src: url("src/assets/fonts/8bit.ttf");
@@ -8,11 +8,11 @@ h1, h2, h3, h4, h5 {
     font-family: nothing;
     font-size: 1rem;
     }
-</style>
+</style> -->
 
 # SVG.INIT
 
-Welcome to SVG.INIT, a user-friendly web application that allows you to create and customize SVG shapes for free. <!--Whether you're a designer, developer, or just someone looking to add unique graphics to your project, this tool has you covered. -->
+Welcome to SVG.INIT, a user-friendly web application that allows you to create and customize SVG shapes for free.
 
 ## Features
 
